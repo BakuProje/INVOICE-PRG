@@ -82,11 +82,11 @@ const InvoicePreview = ({
             <div
               style={{
                 fontFamily: "'Orbitron', sans-serif",
-                fontSize: "32px",
+                fontSize: "30px",
                 fontWeight: 800,
                 color: "#0ea5e9",
-                letterSpacing: 6,
-                textShadow: "0 0 20px rgba(14,165,233,0.4)",
+                letterSpacing: 4,
+                textShadow: "0 0 15px rgba(14,165,233,0.4)",
                 lineHeight: 1,
               }}
             >
