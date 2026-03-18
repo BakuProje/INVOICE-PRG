@@ -62,7 +62,7 @@ const InvoicePreview = ({
               <p
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  fontSize: "20px",
+                  fontSize: "15px",
                   fontWeight: "bold",
                   color: "#0f172a",
                   margin: 0,
@@ -82,7 +82,7 @@ const InvoicePreview = ({
             <div
               style={{
                 fontFamily: "'Orbitron', sans-serif",
-                fontSize: "30px",
+                fontSize: "20px",
                 fontWeight: 800,
                 color: "#0ea5e9",
                 letterSpacing: 4,
