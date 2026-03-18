@@ -48,13 +48,13 @@ const InvoicePreview = ({
         }}
       >
         {/* Header */}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 40, position: "relative", zIndex: 1 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 40, position: "relative", zIndex: 1, gap: 20 }}>
           {/* Company Info - LEFT */}
-          <div style={{ display: "flex", alignItems: "flex-start", gap: 15 }}>
+          <div style={{ display: "flex", alignItems: "flex-start", gap: 15, flexShrink: 1, minWidth: 0 }}>
             <img
               src={logo}
               alt="Logo"
-              style={{ width: "auto", height: "auto", maxWidth: 180, maxHeight: 90, objectFit: "contain", borderRadius: 8 }}
+              style={{ width: "auto", height: "auto", maxWidth: 160, maxHeight: 80, objectFit: "contain", borderRadius: 8, flexShrink: 1 }}
               crossOrigin="anonymous"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
