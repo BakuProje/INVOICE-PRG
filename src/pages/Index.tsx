@@ -92,7 +92,9 @@ const Index = () => {
     const link = document.createElement("a");
     link.download = `Invoice-PRG-${Date.now()}.jpg`;
     link.href = canvas.toDataURL("image/jpeg", 0.9);
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
 
   const downloadPDF = async () => {
@@ -103,7 +105,16 @@ const Index = () => {
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = pdf.internal.pageSize.getHeight();
     pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-    pdf.save(`Invoice-PRG-${Date.now()}.pdf`);
+    
+    const blob = pdf.output("blob");
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `Invoice-PRG-${Date.now()}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setTimeout(() => URL.revokeObjectURL(url), 100);
   };
 
   return (

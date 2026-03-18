@@ -130,18 +130,14 @@ const InvoiceForm = ({ data, onChange, onDownloadImage, onDownloadPDF, onLogoUpl
 
       <div className="space-y-1.5">
         <Label className="text-[0.7rem] uppercase tracking-[1.5px] text-muted-foreground">Durasi (Hari)</Label>
-        <Select value={data.duration} onValueChange={(v) => onChange("duration", v)}>
-          <SelectTrigger className="bg-surface-elevated border-muted text-foreground text-sm focus:border-primary focus:ring-primary/20">
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent className="bg-card border-border">
-            {Array.from({ length: 30 }, (_, i) => (
-              <SelectItem key={i + 1} value={String(i + 1)}>
-                {i + 1} Hari
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
+        <Input 
+          type="text" 
+          inputMode="numeric"
+          value={data.duration} 
+          onChange={(e) => onChange("duration", e.target.value.replace(/\D/g, ""))} 
+          placeholder="Misal: 3"
+          className="bg-surface-elevated border-muted text-foreground text-sm focus:border-primary focus:ring-primary/20" 
+        />
       </div>
 
       <div className="space-y-1.5">

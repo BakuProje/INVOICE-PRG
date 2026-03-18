@@ -62,7 +62,7 @@ const InvoicePreview = ({
               <p
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  fontSize: "1.4rem",
+                  fontSize: "20px",
                   fontWeight: "bold",
                   color: "#0f172a",
                   margin: 0,
@@ -70,7 +70,7 @@ const InvoicePreview = ({
               >
                 {company}
               </p>
-              <div style={{ fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6, marginTop: 4 }}>
+              <div style={{ fontSize: "12px", color: "#64748b", lineHeight: 1.6, marginTop: 4 }}>
                 <div>{whatsapp}</div>
                 <div>{address}</div>
               </div>
@@ -82,7 +82,7 @@ const InvoicePreview = ({
             <div
               style={{
                 fontFamily: "'Orbitron', sans-serif",
-                fontSize: "3rem",
+                fontSize: "32px",
                 fontWeight: 800,
                 color: "#0ea5e9",
                 letterSpacing: 6,
@@ -92,7 +92,7 @@ const InvoicePreview = ({
             >
               INVOICE
             </div>
-            <div style={{ fontSize: "0.9rem", fontWeight: 500, marginTop: 12, color: "#475569" }}>
+            <div style={{ fontSize: "14px", fontWeight: 500, marginTop: 12, color: "#475569" }}>
               Makassar, {date}
             </div>
           </div>
@@ -106,10 +106,11 @@ const InvoicePreview = ({
                 style={{
                   background: "#0f172a",
                   color: "white",
-                  textAlign: "left",
+                  textAlign: "center",
+                  verticalAlign: "middle",
                   padding: "12px 15px",
                   fontFamily: "'Orbitron', sans-serif",
-                  fontSize: "0.8rem",
+                  fontSize: "12px",
                   letterSpacing: 1,
                 }}
               >
@@ -120,9 +121,10 @@ const InvoicePreview = ({
                   background: "#0f172a",
                   color: "white",
                   textAlign: "center",
+                  verticalAlign: "middle",
                   padding: "12px 15px",
                   fontFamily: "'Orbitron', sans-serif",
-                  fontSize: "0.8rem",
+                  fontSize: "12px",
                   letterSpacing: 1,
                 }}
               >
@@ -132,10 +134,11 @@ const InvoicePreview = ({
                 style={{
                   background: "#0f172a",
                   color: "white",
-                  textAlign: "right",
+                  textAlign: "center",
+                  verticalAlign: "middle",
                   padding: "12px 15px",
                   fontFamily: "'Orbitron', sans-serif",
-                  fontSize: "0.8rem",
+                  fontSize: "12px",
                   letterSpacing: 1,
                 }}
               >
@@ -145,21 +148,22 @@ const InvoicePreview = ({
           </thead>
           <tbody>
             <tr>
-              <td style={{ padding: 15, borderBottom: "1px solid #e2e8f0" }}>{description || "-"}</td>
-              <td style={{ padding: 15, borderBottom: "1px solid #e2e8f0", textAlign: "center" }}>{duration ? `${duration} Hari` : "-"}</td>
-              <td style={{ padding: 15, borderBottom: "1px solid #e2e8f0", textAlign: "right" }}>{priceFormatted}</td>
+              <td style={{ padding: 15, borderBottom: "1px solid #e2e8f0", textAlign: "center", verticalAlign: "middle" }}>{description || "-"}</td>
+              <td style={{ padding: 15, borderBottom: "1px solid #e2e8f0", textAlign: "center", verticalAlign: "middle" }}>{duration ? `${duration} Hari` : "-"}</td>
+              <td style={{ padding: 15, borderBottom: "1px solid #e2e8f0", textAlign: "center", verticalAlign: "middle" }}>{priceFormatted}</td>
             </tr>
             <tr style={{ fontWeight: "bold", background: "rgba(248,250,252,0.8)" }}>
-              <td colSpan={2} style={{ padding: 15, textAlign: "right" }}>
+              <td style={{ padding: 15, textAlign: "center" }}></td>
+              <td style={{ padding: 15, textAlign: "center" }}>
                 TOTAL PEMBAYARAN
               </td>
-              <td style={{ padding: 15, textAlign: "right", color: "#0f172a", fontSize: "1.1rem" }}>
+              <td style={{ padding: 15, textAlign: "center", color: "#0f172a", fontSize: "16px" }}>
                 {totalFormatted}
               </td>
             </tr>
             {note && (
               <tr>
-                <td colSpan={3} style={{ padding: 15, textAlign: "right", color: "#b91c1c", fontSize: "0.9rem", fontStyle: "italic", borderTop: "1px dashed #cbd5e1" }}>
+                <td colSpan={3} style={{ padding: 15, textAlign: "right", color: "#b91c1c", fontSize: "14px", fontStyle: "italic", borderTop: "1px dashed #cbd5e1" }}>
                   *Note: {note}
                 </td>
               </tr>
@@ -176,7 +180,7 @@ const InvoicePreview = ({
             textAlign: "center",
           }}
         >
-          <div style={{ fontWeight: "bold", fontSize: "1.1rem", color: "#333", marginBottom: -15, zIndex: 10, position: "relative" }}>
+          <div style={{ fontWeight: "bold", fontSize: "16px", color: "#333", marginBottom: -15, zIndex: 10, position: "relative" }}>
             {company}
           </div>
           <img
@@ -186,10 +190,10 @@ const InvoicePreview = ({
             crossOrigin="anonymous"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
           />
-          <div style={{ fontWeight: "normal", color: "#333", marginBottom: 2, fontSize: "1rem" }}>
+          <div style={{ fontWeight: "normal", color: "#333", marginBottom: 2, fontSize: "16px" }}>
             Muhammad Fatri Syeh
           </div>
-          <div style={{ fontSize: "0.9rem", color: "#666" }}>(Pemilik)</div>
+          <div style={{ fontSize: "14px", color: "#666" }}>(Pemilik)</div>
         </div>
       </div>
     </div>
