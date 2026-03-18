@@ -62,10 +62,11 @@ const InvoicePreview = ({
               <p
                 style={{
                   fontFamily: "'Orbitron', sans-serif",
-                  fontSize: "15px",
+                  fontSize: "20px",
                   fontWeight: "bold",
                   color: "#0f172a",
                   margin: 0,
+                  whiteSpace: "nowrap",
                 }}
               >
                 {company}
@@ -82,12 +83,13 @@ const InvoicePreview = ({
             <div
               style={{
                 fontFamily: "'Orbitron', sans-serif",
-                fontSize: "20px",
+                fontSize: "30px",
                 fontWeight: 800,
                 color: "#0ea5e9",
                 letterSpacing: 4,
                 textShadow: "0 0 15px rgba(14,165,233,0.4)",
                 lineHeight: 1,
+                whiteSpace: "nowrap",
               }}
             >
               INVOICE
@@ -112,6 +114,7 @@ const InvoicePreview = ({
                   fontFamily: "'Orbitron', sans-serif",
                   fontSize: "12px",
                   letterSpacing: 1,
+                  whiteSpace: "nowrap",
                 }}
               >
                 PAKET RENTAL
@@ -126,6 +129,7 @@ const InvoicePreview = ({
                   fontFamily: "'Orbitron', sans-serif",
                   fontSize: "12px",
                   letterSpacing: 1,
+                  whiteSpace: "nowrap",
                 }}
               >
                 JUMLAH HARI
@@ -140,6 +144,7 @@ const InvoicePreview = ({
                   fontFamily: "'Orbitron', sans-serif",
                   fontSize: "12px",
                   letterSpacing: 1,
+                  whiteSpace: "nowrap",
                 }}
               >
                 HARGA PER HARI
