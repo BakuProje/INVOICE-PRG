@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 50% 3%;
+    --foreground: 210 40% 90%;
+
+    --card: 222 40% 7%;
+    --card-foreground: 210 40% 90%;
+
+    --popover: 222 40% 7%;
+    --popover-foreground: 210 40% 90%;
+
+    --primary: 186 100% 50%;
+    --primary-foreground: 220 50% 3%;
+
+    --secondary: 264 100% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 30% 12%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 264 100% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 186 100% 50% / 0.2;
+    --input: 220 30% 15%;
+    --ring: 186 100% 50%;
+
+    --radius: 4px;
+
+    --sidebar-background: 222 40% 7%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 186 100% 50%;
+    --sidebar-primary-foreground: 220 50% 3%;
+    --sidebar-accent: 220 30% 12%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 186 100% 50% / 0.2;
+    --sidebar-ring: 186 100% 50%;
+
+    /* Custom tokens */
+    --surface: 222 40% 7%;
+    --surface-elevated: 220 30% 12%;
+    --neon-glow: 0 0 15px hsl(186 100% 50% / 0.4);
+    --neon-glow-strong: 0 0 30px hsl(186 100% 50% / 0.6);
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary) / 0.3);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.5);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  
+  .glow-border {
+    box-shadow: var(--neon-glow);
+  }
+
+  .glow-border-strong {
+    box-shadow: var(--neon-glow-strong);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px hsl(186 100% 50% / 0.6);
+  }
+}
